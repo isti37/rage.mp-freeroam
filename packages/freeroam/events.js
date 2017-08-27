@@ -46,7 +46,7 @@ mp.events.add('playerDeath', (player) => {
 });
 
 mp.events.add('playerChat', (player, message) => {
-	mp.players.broadcast(`<b>${player.name}[${player.id}]:</b> ${message}`);
+	mp.players.broadcast(`${player.name}[${player.id}]: ${message}`);
 });
 
 // Getting data from client.
@@ -82,6 +82,9 @@ mp.events.add('clientData', function() {
 				let pos = player.position;
 				pos.x += 2;
 				player.customData.vehicle = mp.vehicles.new(mp.joaat(args[1]), pos);
+				if (player.customData.vehicle) {
+					player.putIntoVehicle(player.customData.vehicle, 0);
+				}
 			}
 			// Hide vehicle buttons (bugfix).
 			player.call('hideVehicleButtons');

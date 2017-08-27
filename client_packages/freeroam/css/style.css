@@ -4,13 +4,28 @@
 	font-family: ChaletLondon;
 	src: url('../fonts/ChaletLondonNineteenSixty.ttf');
 }
+@font-face {
+	font-family: Exo2;
+	font-weight: normal;
+	src: url('../fonts/Exo2-Regular.ttf');
+}
+@font-face {
+	font-family: Exo2;
+	font-weight: lighter;
+	src: url('../fonts/Exo2-Thin.ttf');
+}
+@font-face {
+	font-family: Exo2;
+	font-weight: bold;
+	src: url('../fonts/Exo2-Bold.ttf');
+}
 
 body {
 	width: 100vw;
 	height: 100vh;
 	overflow: hidden;
 
-	font-family: ChaletLondon;
+	font-family: "Exo2";
 	font-size: 1vw;
 }
 
